@@ -1,0 +1,11 @@
+/**
+ * @version		1.0.0
+ * @package		YPR - YouTube Playlist Reader
+ * @author    Fotis Evangelou - http://nuevvo.gr
+ * @copyright	Copyright (c) 2010 - 2012 Nuevvo Webware Ltd. All rights reserved.
+ * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+ */
+
+ul.yprList {list-style:none;padding:8px 0;margin:0;}
+ul.yprList li {float:left;width:310px;padding:5px;margin:0;text-align:center;}
+ul.yprList li img {display:block;border:5px solid #ccc;width:300px;height:auto;}

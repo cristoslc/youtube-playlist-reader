@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" class="no-js">
+	<head>
+	  <meta charset="utf-8" />
+
+	  <title>YouTube Playlist Reader (YPR for short)</title>
+
+	  <meta name="description" content="YouTube Playlist Reader - a cross-browser Youtube playlist reader/parser" />
+	  <meta name="keywords" content="javascript, js, youtube, playlist, reader, parser, json" />
+	  <meta name="author" content="Fotis Evangelou" />
+
+	  <link rel="shortcut icon" href="/favicon.ico" />
+	  <link rel="apple-touch-icon" href="/assets/Nuevvo-Logo-v3-iOS-64x64.png" />
+		<link rel="stylesheet" href="css/style.css" />
+
+	  <!-- YPR [start] -->
+	  <link rel="stylesheet" href="css/ypr.css" />
+	  <script type="text/javascript" src="js/ypr.js"></script>
+	  <script type="text/javascript">
+			ypr.ready(function(){
+				ypr.load({
+					'playlistID':'DCAE41611AFA0993',
+					'containerID':'play',
+					'count':12,
+					'theme':'<li><a class="fancybox.iframe" href="{iframeURL}"><img src="{img_m_url}" alt="{title}" width="{img_m_width}" height="{img_m_height}" class="yprVideoThumb" /><span>{title}</span></a></li>'
+				});
+			});
+	  </script>
+		<!-- YPR [end] -->
+
+		<!-- FancyBox (not part of YPR) -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.0.6"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("ul.yprList li a").fancybox({
+					maxWidth	: 800,
+					maxHeight	: 450,
+					fitToView	: false,
+					width		: '800',
+					height		: '450',
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none'
+				});
+			});
+		</script>
+
+		<!-- Google Analytics -->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-16375363-5']);
+		  _gaq.push(['_setDomainName', '.nuevvo.com']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+	<body>
+		<div id="topContainer">
+			<h1>YouTube Playlist Reader</h1>
+			<a id="download" href="http://nuevvo.googlecode.com/files/ypr_v1.0.0.zip">Download</a>
+			<p>A lightweight, superfast, reader for YouTube playlists :)</p>
+			<span id="notice">(Version 1.0.0 - released July 4th, 2012)</span>
+			<p>More from the <a href="http://nuevvo.com/labs/">Nuevvo Labs</a></p>
+		</div>
+
+		<div id="mainContainer">
+		  <h2>Introduction</h2>
+		  <p><strong>YouTube Playlist Reader</strong> was written to cover a specific need: To fetch the videos of specific playlists on YouTube for JoomlaDay Greece. Most things in life tend to come from real needs, right?</p>
+		  <p>To summarize things:</p>
+		  <ul>
+		    <li>You can use it to fetch multiple YouTube playlists on the same page (requires multiple script init blocks of course)</li>
+		    <li>It's simple to implement, small in size and fast to load.</li>
+		    <li>It's non-blocking (asynchronous). This means that the browser will continue to load the rest of the page while feeds are loading.</li>
+		    <li>You can skin the output of the video gallery</li>
+		    <li>It works on all modern browsers: Firefox, Chrome, Safari, Opera and IE 7+ (should normally work in IE6 too).</li>
+		  </ul>
+		  <p>I built the script cause I wanted a simple way to embed the videos from JoomlaDay Greece (an event we organize) on joomladay.gr, having just switched from Vimeo which offered a similar widget. I hated to look around for some crappy jQuery widget to do that, so I just built a new one - and why not share it? Enjoy!</p>
+
+		  <h2>Demo</h2>
+	  	<div id="wrapper">
+	  		<!-- We are initiating YPR in the <head> block of the document and setting the id of the following div element as placeholder for the video gallery -->
+		  	<div id="play">
+		  		<span>Loading...</span>
+		  	</div>
+		  	<div class="clr"></div>
+			</div>
+		  <div id="credits">Copyright &copy; <?php echo date('Y'); ?> <a href="http://twitter.com/fevangelou" target="_blank">Fotis Evangelou</a>.<br />YouTube Playlist Reader is released under the <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU/GPL v2</a> license.</div>
+		</div>
+
+		<!-- Social Tools -->
+		<div id="socialTools">
+			<div class="stFacebook">
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
+			</div>
+			<div class="stTwitter">
+				<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="nuevvo">Tweet</a>
+				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</body>
+</html>
